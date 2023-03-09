@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dauertage</title>
+	<style>
+		body {
+			background-color: #2a2a2a;
+			font-family: Arial, sans-serif;
+			color: white;
+		}
+		
+		h1 {
+			text-align: center;
+			font-size: 3rem;
+			margin-top: 2rem;
+		}
+		
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center; /* changed from space-around to center */
+			list-style-type: none;
+			padding: 0;
+			margin: 4rem 0;
+		}
+		
+		li {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 1rem;
+			padding: 1.5rem;
+			border-radius: 1rem;
+			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+			background-color: rgba(255, 255, 255, 0.05);
+			transition: transform 0.3s ease-in-out;
+			cursor: pointer;
+		}
+		
+		li:hover {
+			transform: translateY(-0.5rem);
+			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+		}
+		
+		li span {
+			font-size: 2.5rem;
+			margin-bottom: 0.5rem;
+		}
+		
+		li small {
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+		}
+		
+		.li1 {
+			color: #d0a94b;
+		}
+		
+		.li2 {
+			color: #7ed957;
+		}
+		
+		.li3 {
+			color: #3e92cc;
+		}
+		
+		.li4 {
+			color: #be4b72;
+		}
+		
+		.li5 {
+			color: #a9a9a9;
+		}
+		
+		.li6 {
+			color: #ff7f50;
+		}
+	</style>
+</head>
+<body>
+	<h1>Dauertage</h1>
+	<ul>
+		<li class="li1">
+			<span>Wiedertag</span>
+			<small>Montag</small>
+		</li>
+		<li class="li2">
+			<span>Funktionstag</span>
+			<small>Dienstag</small>
+		</li>
+		<li class="li3">
+			<span>Zentraltag</span>
+			<small>Mittwoch</small>
+		</li>
+		<li class="li4">
+			<span>Gewitterstag</span>
+			<small>Donnerstag</small>
+		</li>
+		<li class="li5">
+			<span>Genusstag</span>
+			<small>Freitag</small>
+		</li>
+		<li class="li6">
+			<span>Ruhtag</span>
+			<small>Samstag</small>
+		</li>
+		<li class="li1">
+			<span>Reiztag</span>
+			<small>Sonntag</small>
+		</li>
+	</ul>
+</body>
+</html>
