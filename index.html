@@ -1,115 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
 	<title>Dauertage</title>
 	<style>
 		body {
-			background-color: #2a2a2a;
-			font-family: Arial, sans-serif;
-			color: white;
+			background-image: url('https://s2.gifyu.com/images/output-onlinegiftools-3.gif'); /* das hintergrunmd bild (kann auch ein gif sein)*/
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			font: 16px Arial, sans-serif; /* die schrift art */
+			color: #D8DEE9;
 		}
-		
+
 		h1 {
-			text-align: center;
-			font-size: 3rem;
+			font-size: 4rem;
 			margin-top: 2rem;
+			text-align: center;
+			text-shadow: 2px 2px #000;
 		}
-		
+
 		ul {
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: center; /* changed from space-around to center */
-			list-style-type: none;
-			padding: 0;
+			justify-content: center;
+			list-style: none;
 			margin: 4rem 0;
+			padding: 0;
 		}
-		
+/* kleine settings fur weite dinge */
 		li {
+			align-items: center;
+			background: rgba(255, 255, 255, .05);
+			border-radius: 1rem;
+			box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .3);
+			cursor: pointer;
 			display: flex;
 			flex-direction: column;
-			align-items: center;
 			margin: 1rem;
 			padding: 1.5rem;
-			border-radius: 1rem;
-			box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
-			background-color: rgba(255, 255, 255, 0.05);
-			transition: transform 0.3s ease-in-out;
-			cursor: pointer;
+			text-shadow: 1px 1px #000;
+			transition: transform .3s ease-in-out;
+			position: relative;
 		}
-		
+/* animation settings z.b. nach welcher richtung sich die boxen bewegen bei der animation */
 		li:hover {
-			transform: translateY(-0.5rem);
-			box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+			box-shadow: 0 1rem 2rem rgba(0, 0, 0, .3);
+			transform: translateY(-.5rem);
 		}
-		
+
 		li span {
-			font-size: 2.5rem;
-			margin-bottom: 0.5rem;
+			font-size: 3rem;
+			margin-bottom: .5rem;
+			text-shadow: 1px 1px #000;
+			position: relative;
+			z-index: 1;
 		}
-		
+
 		li small {
 			font-size: 1.5rem;
+			letter-spacing: .1rem;
 			text-transform: uppercase;
-			letter-spacing: 0.1rem;
+			position: relative;
+			z-index: 1;
 		}
-		
+/* farben fur die hover animation und animation settings */
+		li:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 1rem;
+			background: linear-gradient(to top right, #222, #4C566A);
+			z-index: -1;
+			opacity: 0.10;
+			transition: opacity .3s ease-in-out;
+		}
+
+		li:hover:before {
+			opacity: 1;
+		}
+/* text farben und alles was mit dem text boxen zutun hat */
 		.li1 {
-			color: #d0a94b;
+			background: #222;
+			color: #BF616A;
 		}
-		
+
 		.li2 {
-			color: #7ed957;
+			background: #222;
+			color: #A3BE8C;
 		}
-		
+
 		.li3 {
-			color: #3e92cc;
+			background: #222;
+			color: #88C0D0;
 		}
-		
+
 		.li4 {
-			color: #be4b72;
+			background: #222;
+			color: #B48EAD;
 		}
-		
+
 		.li5 {
-			color: #a9a9a9;
+			background: #222;
+			color: #EBCB8B;
 		}
-		
+
 		.li6 {
-			color: #ff7f50;
+			background: #222;
+			color: #4C566A;
 		}
+
+		.li7 {
+			background: #222;
+			color: #D08770;
+		}
+/* text boxen bearbeiten oder hinzufugen */
 	</style>
 </head>
 <body>
 	<h1>Dauertage</h1>
 	<ul>
-		<li class="li1">
-			<span>Wiedertag🔄</span>
-			<small>Montag</small>
-		</li>
-		<li class="li2">
-			<span>Funktionstag🚦</span>
-			<small>Dienstag</small>
-		</li>
-		<li class="li3">
-			<span>Zentraltag🏢</span>
-			<small>Mittwoch</small>
-		</li>
-		<li class="li4">
-			<span>Gewitterstag🌩</span>
-			<small>Donnerstag</small>
-		</li>
-		<li class="li5">
-			<span>Genusstag🍻</span>
-			<small>Freitag</small>
-		</li>
-		<li class="li6">
-			<span>Ruhtag🛏</span>
-			<small>Samstag</small>
-		</li>
-		<li class="li1">
-			<span>Reiztag💢</span>
-			<small>Sonntag</small>
-		</li>
-	</ul>
-</body>
-</html>
+		<li class="li1" title="Manchmal ist es wichtig, sich auf Wiederholung und Überprüfung zu konzentrieren."><span>🔄Wiedertag🔄</span><small>Mo</small></li>
+      <li class="li2" title="Manchmal ist es an der Zeit, Dinge zu erledigen und produktiv zu sein."><span>🔧Funktionstag🔧</span><small>Di</small></li>
+      <li class="li3" title="Manchmal ist es wichtig, den Fokus auf die Mitte zu legen und Balance zu finden." ><span>🏢Zentraltag🏢</span><small>Mi</small></li>
+      <li class="li4" title="Manchmal sind Tage voller Stürme und Herausforderungen, aber sie bieten auch die Möglichkeit für Wachstum und Transformation." ><span>⚡Gewitterstag⚡️</span><small>Do</small></li>
+      <li class="li5" title="Manchmal gibt es Tage, an denen es sich lohnt, das Leben zu genießen und sich in Vergnügen zu ergehen." ><span>🍻Genusstag🍻</span><small>Fr</small></li>
+      <li class="li6" title="Manchmal braucht man einfach einen Tag, um sich auszuruhen." ><span>🗿Ruhtag🗿</span><small>Sa</small></li>
+      <li class="li7" title="Manchmal sind Tage sehr stressig und nervig." ><span>💢Reiztag💢</span><small>So</small></li>
+    </ul>
+  </body>
+</html> 
